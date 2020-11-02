@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/musicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/musicImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"/>
+    <ImageView
+        android:id="@+id/musicImage"
+        android:layout_width="234dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="168dp"
+        android:background="@drawable/boder"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pause"
+        android:src="@drawable/play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/musicImage" />
+
+    <ImageView
+        android:id="@+id/lastButton"
+        android:src="@drawable/last"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/pause"
+        app:layout_constraintRight_toLeftOf="@id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:src="@drawable/next"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/pause"
+        app:layout_constraintLeft_toRightOf="@id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <SeekBar
+        android:id="@+id/play_bar"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/musicImage"
+        app:layout_constraintStart_toStartOf="@+id/musicImage"
+        app:layout_constraintTop_toBottomOf="@+id/musicImage" />
+
+    <SeekBar
+        android:id="@+id/vol"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:orientation="horizontal"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@id/musicImage"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintLeft_toRightOf="@id/musicImage"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
