@@ -1,2 +1,2 @@
 # MusicPlayer
- MusicPlayerDemo
+ A simple music player for Android.
